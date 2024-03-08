@@ -1,13 +1,8 @@
 apiVersion: automation.cloudbees.io/v1alpha1
 kind: action
 name: hello-world-action
-description: calls an external script
-inputs:
-  argone:
-    description: simple arg to test
-    required: true
-  
-  
+description: its just a hello-world-action
+
 runs:
   using: composite
   steps:
