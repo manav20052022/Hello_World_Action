@@ -11,5 +11,6 @@ runs:
       uses: docker://alpine/helm:latest
       shell: sh
       run: |
-        echo "Hello World"
+        cd /var
+        ls -al
          
