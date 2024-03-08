@@ -1,0 +1,20 @@
+apiVersion: automation.cloudbees.io/v1alpha1
+kind: action
+name: hello-world-action
+description: calls an external script
+inputs:
+  argone:
+    description: simple arg to test
+    required: true
+  
+  
+runs:
+  using: composite
+  steps:
+    - id: hello-world
+      name: helloworld
+      uses: docker://alpine/helm:latest
+      shell: sh
+      run: |
+        echo "Hello World"
+         
